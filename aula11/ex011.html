@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <h1>Nascionalidade</h1>
+    Em qual País você mora <input type = 'text' id='local'>?
+    <input type="button" value="Verificar se é estrangeiro" onclick="checklocal()">
+    <div id="res"></div>
+    <script>
+        function checklocal (){
+            var NomeLocal = document.getElementById('local')
+            var res = document.getElementById('res')
+            if (NomeLocal.value == "Brasil"){
+                res.innerHTML = 'Você é <strong>Brasileiro!</strong>'
+            } else {
+                res.innerHTML += `Você mora em um país chamado <strong>${NomeLocal.value}</strong>, logo você é estrangeiro!`
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
